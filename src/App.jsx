@@ -1,4 +1,4 @@
-import { useCallback, useRef, useState } from "react";
+import { useCallback, useState } from "react";
 import "./App.css";
 function App() {
   const [usernameInput, setUsernameInput] = useState("");
@@ -70,9 +70,8 @@ function App() {
       </div>
 
       {formDisplay === "openForm" && (
-       
           <div className="modal" >
-          <div style={{ display: "flex", justifyContent: "center" }} onClick={(e) => {
+          <div style={{ display: "flex", justifyContent: "center", height: "100%" }}onClick={(e) => {
             e.stopPropagation();
             setFormDisplay("closeWindow")
           }}>
